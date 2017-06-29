@@ -12,6 +12,8 @@
 		F0DFCFE31EFB3A0E006772E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0DFCFE11EFB3A0E006772E7 /* Main.storyboard */; };
 		F0DFCFE51EFB3A0E006772E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0DFCFE41EFB3A0E006772E7 /* Assets.xcassets */; };
 		F0DFCFE81EFB3A0F006772E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0DFCFE61EFB3A0E006772E7 /* LaunchScreen.storyboard */; };
+		F0F815181F05C49000719CF9 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0F815161F05C49000719CF9 /* Fabric.framework */; };
+		F0F815191F05C49000719CF9 /* Appsee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0F815171F05C49000719CF9 /* Appsee.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		F0DFCFE41EFB3A0E006772E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0DFCFE71EFB3A0F006772E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F0DFCFE91EFB3A0F006772E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0F815161F05C49000719CF9 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		F0F815171F05C49000719CF9 /* Appsee.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Appsee.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0F815191F05C49000719CF9 /* Appsee.framework in Frameworks */,
+				F0F815181F05C49000719CF9 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +46,8 @@
 			children = (
 				F0DFCFDC1EFB3A0E006772E7 /* Doggo */,
 				F0DFCFDB1EFB3A0E006772E7 /* Products */,
+				F0F815161F05C49000719CF9 /* Fabric.framework */,
+				F0F815171F05C49000719CF9 /* Appsee.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +82,7 @@
 				F0DFCFD61EFB3A0E006772E7 /* Sources */,
 				F0DFCFD71EFB3A0E006772E7 /* Frameworks */,
 				F0DFCFD81EFB3A0E006772E7 /* Resources */,
+				F0F8150D1F05C22300719CF9 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -131,6 +140,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F0F8150D1F05C22300719CF9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 00d53f9f5130b3b2573ecf12641f001edb98046c 31f9dc13a2ce8d09c641bd101b9fd1e2a004a7b9ea6f39f7f9a40c713676a501";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F0DFCFD61EFB3A0E006772E7 /* Sources */ = {
@@ -262,12 +287,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5YKN289934;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Doggo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Fred.Doggo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -276,12 +306,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5YKN289934;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Doggo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Fred.Doggo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -304,6 +339,7 @@
 				F0DFCFEE1EFB3A0F006772E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
